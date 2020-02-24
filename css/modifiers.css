@@ -1,0 +1,34 @@
+.has-hooks::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 10px solid #000;
+  border-right: 10px solid #000;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid transparent;
+  z-index: 1;
+  pointer-events: none;
+}
+.has-hooks::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 10px solid #000;
+  border-left: 10px solid #000;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.is-dimmed {
+  opacity: .5;
+}
+.is-inverted {
+  color: #FFF;
+}
+.is-hidden {
+  display: none;
+}

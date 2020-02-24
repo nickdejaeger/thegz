@@ -1,0 +1,26 @@
+.main-grid {
+  position: relative;
+}
+.main-grid-tile {
+  width: 50%;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+.main-grid-tile__inner {
+  position: relative;
+  transition: all .3s ease-in-out;
+}
+
+
+
+
+@media (max-width: 900px) {
+  .main-grid-tile {
+    width: auto;
+  }
+}
+@media (min-width: 1400px) {
+  .main-grid-tile {
+    width: 33.333332%;
+  }
+}

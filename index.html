@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>The Geraldines</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="theme.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=latin-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=latin-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Francois+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css" integrity="sha256-ct5KWWMn5eSjQCQkdJrskmSppUJDoXwUlBQXCZcISPk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/modifiers.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Hyphenator/5.3.0/Hyphenator.min.js"></script>
     <script>
-
       // HYPHENS
   		var hyphenatorSettings = {
   			selectorfunction: function () {
@@ -24,287 +26,204 @@
   		};
   		Hyphenator.config(hyphenatorSettings);
       Hyphenator.run();
-
     </script>
   </head>
+
   <body class="hyphenate">
 
-    <div class="root">
-      <aside role="navigation">
-        <header>
-          <div class="title">
-            <h1><span>The</span><span>Geraldines</span></h1>
-          </div>
+    <div class="root app">
+
+      <aside class="app-sidebar">
+        <header class="app-sidebar__header">
+          <h1 class="logo">
+            <div class="text-logo-sm">The</div>
+            <div class="text-logo">Geraldines</div>
+          </h1>
           <div class="cover">
-            <img src="the-geraldines-cover.jpg">
+            <img src="media/the-geraldines-cover.jpg">
           </div>
         </header>
-        <div>
-          <nav>
-            <ul class="filter">
-              <li class="filter__li filter__li--active"><a href="#" class="filter__a" data-filter="all">All</a></li>
-              <li class="filter__li"><a href="#news" class="filter__a" data-filter="news">News</a></li>
-              <li class="filter__li"><a href="#show" class="filter__a" data-filter="show">Shows</a></li>
-              <li class="filter__li"><a href="#music" class="filter__a" data-filter="music">Music</a></li>
-              <li class="filter__li"><a href="#media" class="filter__a" data-filter="media">Media</a></li>
-            </ul>
-            <ul class="external">
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Spotify</a></li>
-              <li><a href="#">Vibe</a></li>
-            </ul>
-          </nav>
-          <footer>
-            <p>Bookings via <a href="mailto:info@pulseagencymusic.com">info@pulseagencymusic.com</a></p>
-          </footer>
-        </div>
+        <nav class="app-sidebar__nav" role="navigation">
+          <ul class="grid-filter">
+            <li class="active"><a href="#" class="text-filter" data-filter="all">All</a></li>
+            <li><a href="#news" class="text-filter" data-filter="news">News</a></li>
+            <li><a href="#event" class="text-filter" data-filter="event">Shows</a></li>
+            <li><a href="#music" class="text-filter" data-filter="music">Music</a></li>
+            <li><a href="#media" class="text-filter" data-filter="media">Media</a></li>
+          </ul>
+          <ul class="external">
+            <li><a href="#" class="link text-filter-external">Facebook</a></li>
+            <li><a href="#" class="link text-filter-external">Instagram</a></li>
+            <li><a href="#" class="link text-filter-external">Spotify</a></li>
+            <li><a href="#" class="link text-filter-external">Vi.be</a></li>
+          </ul>
+        </nav>
+        <footer class="app-sidebar__footer">
+          <p>Bookings via <a href="mailto:info@thegeraldines.be">info@thegeraldines.be</a></p>
+        </footer>
       </aside>
 
-      <main role="main">
-        <header>
 
-        </header>
-        <div class="GRID">
-          <div class="GRID__ITEM GRID__ITEM--show">
-            <div class="feed__el feed__el--event">
-              <h5 class="font-h5">Agenda</h5>
-              <h2>30/3, JC Bouckenborgh</h2>
+      <main class="app-main" role="main">
+
+        <section class="main-grid">
+          <article class="main-grid-tile" data-type="event">
+            <div class="main-grid-tile__inner p-12 has-hooks">
+              <h5 class="is-dimmed">Agenda</h5>
+              <h2 class="mb-4 text-shadow-yellow">30/3, JC Bouckenborgh</h2>
               <h4>Antwerp, stationslaan 33</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-          </div>
-          <div class="GRID__ITEM GRID__ITEM--media">
-            <div class="feed__el feed__el--cover" style="media/the-geraldines-photo001.jpg">
+          </article>
+
+          <article class="main-grid-tile" data-type="media">
+            <div class="main-grid-tile__inner">
               <figure>
                 <img src="media/the-geraldines-photo001.jpg">
+                <figcation class="h5 cover-label">CC Mechelen</figcation>
               </figure>
-              <article>
-                <p>CC Mechelen</p>
-              </article>
             </div>
-          </div>
-          <div class="GRID__ITEM GRID__ITEM--show">
-            <div class="feed__el feed__el--event">
-              <h5 class="font-h5">Agenda</h5>
-              <h2>31/3, Schalander</h2>
+          </article>
+
+          <article class="main-grid-tile" data-type="event">
+            <div class="main-grid-tile__inner p-12 has-hooks">
+              <h5 class="is-dimmed">Agenda</h5>
+              <h2 class="mb-4 text-shadow-yellow">31/3, Schalander</h2>
               <h4>Kusel (GER)</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-          </div>
-          <div class="GRID__ITEM GRID__ITEM--show">
-            <div class="feed__el" style="nextup.jpg">
+          </article>
+
+          <article class="main-grid-tile" data-type="event">
+            <div class="main-grid-tile__inner">
               <figure>
-                <img src="nextup.jpg">
+                <img src="media/nextup.jpg">
+                <figcation class="h5 cover-label">Next up</figcation>
               </figure>
             </div>
-          </div>
+          </article>
 
-          <div class="GRID__ITEM GRID__ITEM--news">
-            <div class="feed__el feed__el--news">
-              <article>
-                <h5 class="font-h5">News</h5>
-                <h2>New clip: Fluff</h2>
-                <p>Check our new video for ‘Fluff’, the title track of our new EP.</p>
-              </article>
+          <article class="main-grid-tile" data-type="news">
+            <div class="main-grid-tile__inner p-12 has-hooks">
+              <h5 class="is-dimmed">News</h5>
+              <h2 class="mb-4 mb-2 text-shadow-blue">New clip: Fluff</h2>
+              <p>Check our new video for ‘Fluff’, the title track of our new EP.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="GRID__ITEM GRID__ITEM--news">
-            <div class="feed__el feed__el--news feed__el--black feed__el--link">
-              <article>
-                <h5 class="font-h5">News</h5>
-                <h2>New clip: Fluff</h2>
-                <p>Check our new video for ‘Fluff’, the title track of our new EP.</p>
-              </article>
-              <div class="feed__links">
-                <ul>
-                  <li><a href="#">Listen on Spotify</a></li>
-                  <li><a href="#">Watch on YouTube</a></li>
-                </ul>
+          <article class="main-grid-tile" data-type="news">
+            <div class="main-grid-tile__inner p-12 bg-black is-inverted has-hooks has-links">
+              <h5>News</h5>
+              <h2 class="mb-4 text-shadow-blue">New clip: Fluff</h2>
+              <p>Check our new video for ‘Fluff’, the title track of our new EP.</p>
+              <div class="main-grid-tile__links">
+                <a href="#">open Spotify</a>
+                <a href="#">open YouTube</a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="GRID__ITEM GRID__ITEM--media">
-            <div class="feed__el feed__el--cover" style="media/the-geraldines-photo002.png">
+          <article class="main-grid-tile" data-type="media">
+            <div class="main-grid-tile__inner">
               <figure>
                 <img src="media/the-geraldines-photo002.png">
+                <figcation class="h5 cover-label">Working on a new clip</figcation>
               </figure>
-              <article>
-                <p>Working on a new clip</p>
-              </article>
             </div>
-          </div>
+          </article>
 
-          <div class="GRID__ITEM GRID__ITEM--music">
-            <div class="feed__el feed__el--cover" style="fluff.jpg">
+          <article class="main-grid-tile" data-type="music">
+            <div class="main-grid-tile__inner has-links">
               <figure>
-                <img src="fluff.jpg">
+                <img src="media/fluff.jpg">
+                <figcation class="h5 cover-label">Album: Fluff</figcation>
               </figure>
-              <article>
-                <p>Album: Fluff</p>
-              </article>
+              <div class="main-grid-tile__links">
+                <a href="#">on Spotify</a>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="GRID__ITEM GRID__ITEM--media">
-            <div class="feed__el feed__el--cover" style="media/the-geraldines-photo003.jpg">
+          <article class="main-grid-tile" data-type="media">
+            <div class="main-grid-tile__inner">
               <figure>
                 <img src="media/the-geraldines-photo003.jpg">
+                <figcation class="h5 cover-label">The Drivellers EP's came in</figcation>
               </figure>
-              <article>
-                <p>The Drivellers EP's came in</p>
-              </article>
+              <div class="main-grid-tile__links">
+                <a href="#">Koop EP</a>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="GRID__ITEM GRID__ITEM--media">
-            <div class="feed__el feed__el--cover" style="media/the-geraldines-photo004.jpg">
+          <article class="main-grid-tile" data-type="media">
+            <div class="main-grid-tile__inner">
               <figure>
                 <img src="media/the-geraldines-photo004.jpg">
+                <figcation class="h5 cover-label">Bart</figcation>
               </figure>
-              <article>
-                <p>Bart</p>
-              </article>
             </div>
-          </div>
+          </article>
 
-          <div class="GRID__ITEM GRID__ITEM--media">
-            <div class="feed__el feed__el--cover" style="media/the-geraldines-photo005.jpg">
+          <article class="main-grid-tile" data-type="music">
+            <div class="main-grid-tile__inner has-links">
+              <figure>
+                <img src="media/album-hospital-lights.jpg">
+                <figcation class="h5 cover-label">Album: Hospital Lights</figcation>
+              </figure>
+              <div class="main-grid-tile__links">
+                <a href="#">on Spotify</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="main-grid-tile" data-type="media">
+            <div class="main-grid-tile__inner">
               <figure>
                 <img src="media/the-geraldines-photo005.jpg">
+                <figcation class="h5 cover-label">Casual</figcation>
               </figure>
-              <article>
-                <p>Casual</p>
-              </article>
             </div>
-          </div>
+          </article>
 
-          <div class="GRID__ITEM GRID__ITEM--media">
-            <div class="feed__el feed__el--cover" style="media/the-geraldines-photo006.jpg">
+          <article class="main-grid-tile" data-type="news">
+            <div class="main-grid-tile__inner p-12 bg-yellow-400 has-hooks has-links">
+              <h5>News</h5>
+              <h2 class="mb-4 text-shadow-blue">New clip: Fluff</h2>
+              <p>Check our new video for ‘Fluff’, the title track of our new EP.</p>
+              <div class="main-grid-tile__links">
+                <a href="#">open Spotify</a>
+                <a href="#">open YouTube</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="main-grid-tile" data-type="media">
+            <div class="main-grid-tile__inner">
               <figure>
                 <img src="media/the-geraldines-photo006.jpg">
+                <figcation class="h5 cover-label">Working on a new clip</figcation>
               </figure>
-              <article>
-                <p>Working on a new clip</p>
-              </article>
             </div>
-          </div>
+          </article>
 
-        </div>
+          <article class="main-grid-tile is-hidden" data-type="empty">
+            <div class="main-grid-tile__inner p-12">
+              <h2 class="is-dimmed">Nothing here...</h2>
+            </div>
+          </article>
+
+        </section>
+
       </main>
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Hyphenator/5.3.0/Hyphenator.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
-    <script>
-      $(document).ready(function() {
-
-
-
-        var $grid = $('.GRID').masonry({
-          // disable initial layout
-          initLayout: false,
-          itemSelector: '.GRID__ITEM'
-        });
-        // bind event
-        $grid.masonry( 'on', 'layoutComplete', function() {
-          console.log('layout is complete');
-        });
-        // trigger initial layout
-        $grid.masonry();
-
-
-/*
-        $('.feed__el').hover(function() {
-          $('.feed__el').css({
-            'filter': 'blur(2px) saturate(0)'
-          });
-          $(this).css({
-            'filter': 'blur(0px) saturate(1)'
-          });
-        }, function() {
-          $('.feed__el').css({
-            'filter': 'blur(0px) saturate(1)'
-          });
-          $(this).css({
-            'filter': 'blur(2px) saturate(0)'
-          });
-        });
-*/
-
-
-
-    //var test = 'office';
-
-    var types = [
-    'news',
-    'show',
-    'music',
-    'media'
-    ];
-
-
-
-    // Show correct items when link with hashtag is copied
-
-            if (window.location.hash) {
-                var hash = window.location.hash.substring(1);
-
-                // Reset
-                $('.filter__li').removeClass('filter__li--active');
-                $('.GRID__ITEM').hide();
-
-                // Check if the hash exists, else replace with 'all';
-                if ($.inArray(hash, types) < 0) {
-                    $('.GRID__ITEM').fadeIn(1000);
-                    $('.filter__li:first-child').addClass('filter__li--active');
-                }
-                else {
-                    $('.filter__li a').each(function() {
-                        if ($(this).attr('data-filter') == hash) {
-                            $(this).parent('li').addClass('filter__li--active');
-                        }
-                    });
-
-                    $('.GRID__ITEM--' + hash).each(function() {
-                        $(this).fadeIn(1000);
-                    });
-                }
-
-                $grid.masonry();
-            }
-
-
-          // Navigation
-
-          $('.filter__a').click(function() {
-              var currentType = $(this).attr('data-filter');
-
-              console.log(currentType);
-
-              $('.filter__li').removeClass('filter__li--active');
-              $(this).parent('li').addClass('filter__li--active');
-
-              $('.GRID__ITEM').hide();
-
-              if (currentType === 'all') {
-                  $('.GRID__ITEM').fadeIn(1000);
-              }
-              else if ($('.GRID__ITEM--' + currentType).length) {
-                  $('.GRID__ITEM--' + currentType).fadeIn();
-              }
-
-              $grid.masonry();
-          });
-
-
-
-
-      });
-    </script>
-
+    <script src="js/grid-init.js"></script>
+    <script src="js/grid-filter-hash.js"></script>
+    <script src="js/grid-filter-nav.js"></script>
   </body>
 </html>
